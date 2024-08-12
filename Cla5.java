@@ -4,23 +4,30 @@ import java.util.*;
 class Cla5
 {
 	public static void main(String args[])
-	{
-		int n,fact=1;
-		for(int i=0;i<args.length;i++)
-		{
-			n = Integer.parseInt(args[i]);
-			for(int j=n;j>=1;j--)
-			{
-				fact*=j;
-				
-			}
-			System.out.println(fact);
-			fact=1;
-
-		}
-	
+	{ 
+			long n;
 		
+			n = Long.parseLong(args[0]);
+			Factorial f1 = new Factorial();
+			long g = f1.fact(n);
+			System.out.println(g);
+
+
 	}
 }
-//input:java Cla5 5 6 7
-//output:120 720 5040
+class Factorial
+{
+	long fact(long n)
+	{
+		int k = (int)(n);
+		long fact=1;
+		for(int j=k;j>=1;j--)
+			{
+				fact*=(long)(j);
+				
+			}
+			return fact;
+	}
+}
+//input:java Cla5 5
+//output:120
